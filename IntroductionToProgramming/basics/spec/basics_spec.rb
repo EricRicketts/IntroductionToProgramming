@@ -2,6 +2,14 @@ describe 'Execises for Basics Chapter of Introduction to Programming' do
 
   before(:all) do
     @number = 5432
+    @movies = {
+      :jaws => 1975,
+      :arthur => 1981,
+      :shrek => 2001,
+      :hero => 2004,
+      :frozen => 2013
+    }
+    @years = [1975, 1981, 2001, 2004, 2013]
   end
 
   it 'exercise 1' do
@@ -11,7 +19,6 @@ describe 'Execises for Basics Chapter of Introduction to Programming' do
   end
 
   it 'exercise 2 part a' do
-    number = 5432
     expect(@number / 1000).to eq 5         
   end
 
@@ -25,6 +32,51 @@ describe 'Execises for Basics Chapter of Introduction to Programming' do
 
   it 'exercise 2 part d' do
     expect(@number % 10).to eq 2
+  end
+
+  it 'exercise 3 part a' do
+    expect(@movies[:jaws]).to eq 1975
+  end
+
+  it 'exercise 3 part b' do
+    expect(@movies[:arthur]).to eq 1981
+  end
+
+  it 'exercise 3 part c' do
+    expect(@movies[:shrek]).to eq 2001
+  end
+
+  it 'exercise 3 part d' do
+    expect(@movies[:hero]).to eq 2004
+  end
+
+  it 'exercise 3 part e' do
+    expect(@movies[:frozen]).to eq 2013
+  end
+
+  it 'exercise 4 part a' do
+    expect(@years[0]).to eq 1975
+  end
+
+  it 'exercise 4 part b' do
+    expect(@years[1]).to eq 1981
+  end
+
+  it 'exercise 4 part c' do
+    expect(@years[2]).to eq 2001
+  end
+
+  it 'exercise 4 part d' do
+    expect(@years[3]).to eq 2004
+  end
+
+  it 'exercise 4 part e' do
+    expect(@years[4]).to eq 2013
+  end
+
+  it 'exercises 3 and 4 condensed version' do
+    years = @movies.values.sort
+    expect(years.eql?(@years)).to eq true
   end
 
 end
