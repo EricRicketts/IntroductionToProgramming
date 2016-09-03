@@ -70,20 +70,29 @@ describe 'Exercises For Introduction To Programming Hashes Chapter' do
 
   end
 
-  # context 'Sixth Exercise' do
+  context 'Sixth Exercise' do
     
-  #   it 'exercise 6' do
-  #     words =  ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
-  #               'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
-  #               'flow', 'neon']
-  #     until words.empty?
-  #       first_word = words.first.split('').sort
-  #       words.each do |word|
-  #       end
-  #     end
-  #   end
+    it 'exercise 6' do
+      answer = 
+        [
+        ["demo", "dome", "mode"],
+        ["none", "neon"], 
+        ["tied", "diet", "edit", "tide"],
+        ["evil", "live", "veil", "vile"],
+        ["fowl", "wolf", "flow"]
+        ]
+      words =  ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
+                'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
+                'flow', 'neon']
+      anagrams = words.group_by {|word| word.downcase.chars.sort}.values
+      i = 0
+      anagrams.each do |words|
+        expect(words.eql?(answer[i]))
+        i +=1    
+      end
+    end
 
-  # end
+  end
 
   context 'Seventh Exercise' do
     
