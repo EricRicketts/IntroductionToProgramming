@@ -94,6 +94,28 @@ describe 'Introduction To Programming Exercises' do
     expect(contacts["Sally Johnson"][:phone]).to eq "123-234-3454"        
   end
 
+  it 'exercise 15' do
+    arr = ['snow', 'winter', 'ice', 'slippery', 'salted roads', 'white trees']
+    arr.delete_if {|word| word.start_with?("s")}
+    expect(arr.sort).to eq(["ice", "white trees", "winter"])
+    arr = ['snow', 'winter', 'ice', 'slippery', 'salted roads', 'white trees']
+    arr.delete_if {|word| word.start_with?("s") || word.start_with?("w")}
+    expect(arr).to eq(["ice"]) 
+  end
+
+  it 'exercise 16' do
+    a = ['white snow', 'winter wonderland', 'melting ice',
+     'slippery sidewalk', 'salted roads', 'white trees']
+    new_sorted_ary = ["ice", "melting", "roads", "salted", "sidewalk", "slippery", "snow", "trees", "white", "white", "winter", "wonderland"]
+    expect(a.join(' ').split.sort).to eq new_sorted_ary
+  end
+
+  it 'exercise 17' do
+    hash1 = {shoes: "nike", "hat" => "adidas", :hoodie => true}
+    hash2 = {"hat" => "adidas", :shoes => "nike", hoodie: true}
+    expect(hash1.eql?(hash2)).to eq true
+  end
+
 end
 
 puts "Exercise 7"
