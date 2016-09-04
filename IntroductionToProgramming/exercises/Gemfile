@@ -1,0 +1,6 @@
+# Gemfile
+source 'https://rubygems.org'
+group :development do
+  gem 'rspec', '>=3.5.0'
+  gem 'guard-rspec', '>=4.7.0'
+end
