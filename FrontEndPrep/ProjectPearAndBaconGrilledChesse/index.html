@@ -8,20 +8,43 @@
     <style type="text/css" media="screen">
       h1 {color: cadetblue;}  
       h2 {color: crimson;}
+      body {
+        font-size: 20px;
+        color: #666666;
+      }
+      #ingredients {
+        color: blue;
+      }
+      #directions {
+        color: red;
+      }
+      .components {
+        font-style: italic;
+      }
+      .make-it {
+        font-family: sans-serif;
+      }
+      b {
+        font-weight: 800;
+      }
     </style>
   </head>
   <body>
     <h1>Pear and Bacon Grilled Cheese</h1>
-    <h2>Ingredients</h2>
-    <p>2 tablespoons unsalted butter</p>
-    <p>2 tablespoons currant or fig jam</p>
-    <p>2 slices white sandwich bread</p>
-    <p>2 slices Cheddar</p>
-    <p>2 slices cooked bacon</p>
-    <p>1/4 small pear, thinly sliced</p>
-    <h2>Directions</h2>
-    <p>1. Melt the <b>butter</b> in a small skillet over medium-low heat. Spread the <b>jam</b> on 1 slice of the <b>bread</b> and<!-- 
-    -->form a sandwich with the <b>cheese,</b> <b>bacon,</b> <b>and pear</b>.</p>
-    <p>2. Cook the sandwich, covered, until the </b>bread</p> is toasted and the <b>cheese</b> is melted, 2 to 3 minutes per side.</p>
+    <h2 id="ingredients">Ingredients</h2>
+    <div class="components">
+      <p>2 tablespoons unsalted butter</p>
+      <p>2 tablespoons currant or fig jam</p>
+      <p>2 slices white sandwich bread</p>
+      <p>2 slices Cheddar</p>
+      <p>2 slices cooked bacon</p>
+      <p>1/4 small pear, thinly sliced</p>     
+    </div>
+    <h2 id="directions">Directions</h2>
+    <div class="make-it">
+      <p>1. Melt the <b>butter</b> in a small skillet over medium-low heat. Spread the <b>jam</b> on 1 slice of the <b>bread</b> and<!-- 
+      -->form a sandwich with the <b>cheese,</b> <b>bacon,</b> <b>and pear</b>.</p>
+      <p>2. Cook the sandwich, covered, until the </b>bread</p> is toasted and the <b>cheese</b> is melted, 2 to 3 minutes per side.</p>     
+    </div>
   </body>
 </html>
