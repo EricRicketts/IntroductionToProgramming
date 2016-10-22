@@ -36,6 +36,19 @@ end
 
 class StringTest < Minitest::Test
 
+@@my_heredoc = <<HEREDOC
+this is a Here Document
+
+
+this is its end
+HEREDOC
+
+@@my_indented_heredoc = <<-INDENTDOC
+  This is the indentation
+
+  this is one space indentation
+INDENTDOC
+
   def test_double_quote_and_single_quote_strings
     assert_equal "this is a double \s\s", 'this is a double   '  
   end
@@ -44,8 +57,24 @@ class StringTest < Minitest::Test
     assert_equal "#{4 + 4}", "8"
   end
 
+  def test_escape_variable_interpolation
+    assert_equal "\#{4 + 4}", '#{4 + 4}'
+  end
+
   def test_concatentation
     assert_equal %q(a) "b" 'c', 'abc'
+  end
+
+   def test_literal_character_notation
+    assert_equal ?\n, "\n"
+  end
+
+  def test_here_doc
+    assert_equal @@my_heredoc, "this is a Here Document\n\n\nthis is its end\n"
+  end
+
+  def test_indent_here_doc
+    assert_equal @@my_indented_heredoc, "\s\sThis is the indentation\n\n\s\sthis is one space indentation\n" 
   end
 
 end
