@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class ExerciseOne < Minitest::Test
+class Exercise1Test < Minitest::Test
   def setup
     def repeat_after_me
       puts ">> Type anything you want:"
