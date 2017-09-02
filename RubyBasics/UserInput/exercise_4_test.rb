@@ -10,16 +10,16 @@ class Exercise3Test < Minitest::Test
     def something
       output = %w(something help conversation drill plateau up down left right sea sky).sample
       error = "Invalid input!  Please enter y or n or some form of yes or no irrespective of character case."
-      puts "Do you want me to print something? (y/n)"
       loop do
-          user_response = gets.chomp.strip
-          break if /\A[yYeEsS]+\z/.match(user_response)
-          if /\A[nNoO]+\z/.match(user_response)
-            output = ""
-            break
-          else
-            puts error
-          end
+        puts "Do you want me to print something? (y/n)"
+        user_response = gets.chomp.strip
+        break if /\A[yYeEsS]+\z/.match(user_response)
+        if /\A[nNoO]+\z/.match(user_response)
+          output = ""
+          break
+        else
+          puts error
+        end
       end
       puts output
     end
@@ -54,7 +54,7 @@ class Exercise3Test < Minitest::Test
   def test_invalid_input
     error = "Invalid input!  Please enter y or n or some form of yes or no irrespective of character case\."
     $stdin = StringIO.new("  help  \ny\n")
-    assert_output(/\ADo you want me to print something\? \(y\/n\)\n#{error}\n#{POSSIBLE_MATCHES}\n/) { something }    
+    assert_output(/\ADo you want me to print something\? \(y\/n\)\n#{error}\n\ADo you want me to print something\? \(y\/n\)\n#{POSSIBLE_MATCHES}\n/) { something }    
   end
 
 end
