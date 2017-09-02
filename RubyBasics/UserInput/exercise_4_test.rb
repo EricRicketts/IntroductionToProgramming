@@ -3,6 +3,8 @@ require 'minitest/pride'
 
 class Exercise3Test < Minitest::Test
   
+  POSSIBLE_MATCHES = "something|help|conversation|drill|plateau|up|down|left|right|sea|sky"
+
   def setup
 
     def something
@@ -31,14 +33,12 @@ class Exercise3Test < Minitest::Test
 
   def test_valid_input_just_y
     $stdin = StringIO.new("y\n")
-    possible_matches = "something|help|conversation|drill|plateau|up|down|left|right|sea|sky"
-    assert_output(/\ADo you want me to print something\? \(y\/n\)\n#{possible_matches}\n/) { something }
+    assert_output(/\ADo you want me to print something\? \(y\/n\)\n#{POSSIBLE_MATCHES}\n/) { something }
   end
 
   def test_valid_input_yes
     $stdin = StringIO.new("  yES  \n")
-    possible_matches = "something|help|conversation|drill|plateau|up|down|left|right|sea|sky"
-    assert_output(/\ADo you want me to print something\? \(y\/n\)\n#{possible_matches}\n/) { something }
+    assert_output(/\ADo you want me to print something\? \(y\/n\)\n#{POSSIBLE_MATCHES}\n/) { something }
   end
 
   def test_valid_input_just_n
@@ -46,9 +46,15 @@ class Exercise3Test < Minitest::Test
     assert_output(/\ADo you want me to print something\? \(y\/n\)\n\n/) { something }    
   end
 
-  def test_valid_input_other_than_n
+  def test_valid_input_no
     $stdin = StringIO.new("  No  \n")
     assert_output(/\ADo you want me to print something\? \(y\/n\)\n\n/) { something }    
+  end
+
+  def test_invalid_input
+    error = "Invalid input!  Please enter y or n or some form of yes or no irrespective of character case\."
+    $stdin = StringIO.new("  help  \ny\n")
+    assert_output(/\ADo you want me to print something\? \(y\/n\)\n#{error}\n#{POSSIBLE_MATCHES}\n/) { something }    
   end
 
 end
