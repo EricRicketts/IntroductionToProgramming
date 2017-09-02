@@ -12,6 +12,7 @@ class Exercise5Test < Minitest::Test
         puts "How many output lines do you want?  Enter a number >= 3:"
         number_of_repeats = gets.chomp.strip.to_i
         break if number_of_repeats >= 3
+        puts "That\'s not enough lines\." if number_of_repeats < 3
       end
       puts output * number_of_repeats
     end
@@ -26,6 +27,12 @@ class Exercise5Test < Minitest::Test
   def test_minimum_repeats
     expected_output = "Launch School is the best!\n" * 3
     $stdin = StringIO.new("3\n")
+    assert_output(/#{expected_output}/) { launch_school_printer }
+  end
+
+  def test_less_than_minimum_repeats
+    expected_output = "That\'s not enough lines\."
+    $stdin = StringIO.new("2\n3\n")
     assert_output(/#{expected_output}/) { launch_school_printer }
   end
 
