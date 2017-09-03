@@ -11,18 +11,16 @@ class Exercise8Test < Minitest::Test
     end
 
     def check_the_numerator(numerator)      
-     loop do
-      puts "Please enter the numerator:"
-      numerator = gets.chomp.strip
-      if !valid_number?(numerator)
-        puts "Invalid Input.  Only integers are allowed."
-        next
-      else
-        numerator = numerator.to_i
+      loop do
+        puts "Please enter the numerator:"
+        numerator = gets.chomp.strip
+        unless valid_number?(numerator)
+          puts "Invalid Input.  Only integers are allowed."
+          next
+        end
+        break
       end
-      break
-    end
-    return numerator
+    return numerator.to_i
    end
 
     def check_the_denominator(denominator)
