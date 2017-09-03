@@ -27,18 +27,13 @@ class Exercise8Test < Minitest::Test
       loop do
         puts "Please enter the denominator:"
         denominator = gets.chomp.strip 
-        if !valid_number?(denominator)
-          puts "Invalid Input.  Only integers are allowed."
+        if !valid_number?(denominator) || denominator == "0"
+          puts (denominator == "0" ? "Invalid Input.  A denominator of 0 is not allowed." : "Invalid Input.  Only integers are allowed.")
           next
-        elsif denominator == "0"
-          puts "Invalid Input.  A denominator of 0 is not allowed."
-          next
-        else
-          denominator = denominator.to_i
         end
         break
       end
-      return denominator      
+      return denominator.to_i      
     end
 
     def integer_division
