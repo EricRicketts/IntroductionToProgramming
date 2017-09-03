@@ -10,35 +10,45 @@ class Exercise8Test < Minitest::Test
       number_string.to_i.to_s == number_string         
     end
 
+    def check_the_numerator(numerator)      
+     loop do
+      puts "Please enter the numerator:"
+      numerator = gets.chomp.strip
+      if !valid_number?(numerator)
+        puts "Invalid Input.  Only integers are allowed."
+        next
+      else
+        numerator = numerator.to_i
+      end
+      break
+    end
+    return numerator
+   end
+
+    def check_the_denominator(denominator)
+      loop do
+        puts "Please enter the denominator:"
+        denominator = gets.chomp.strip 
+        if !valid_number?(denominator)
+          puts "Invalid Input.  Only integers are allowed."
+          next
+        elsif denominator == "0"
+          puts "Invalid Input.  A denominator of 0 is not allowed."
+          next
+        else
+          denominator = denominator.to_i
+        end
+        break
+      end
+      return denominator      
+    end
+
     def integer_division
       numerator = 1
       denominator = 1
       loop do
-        loop do
-          puts "Please enter the numerator:"
-          numerator = gets.chomp.strip
-          if !valid_number?(numerator)
-            puts "Invalid Input.  Only integers are allowed."
-            next
-          else
-            numerator = numerator.to_i
-          end
-          break
-        end
-        loop do
-          puts "Please enter the denominator:"
-          denominator = gets.chomp.strip 
-          if !valid_number?(denominator)
-            puts "Invalid Input.  Only integers are allowed."
-            next
-          elsif denominator == "0"
-            puts "Invalid Input.  A denominator of 0 is not allowed."
-            next
-          else
-            denominator = denominator.to_i
-          end
-          break
-        end
+        numerator = check_the_numerator(numerator)
+        denominator = check_the_denominator(denominator)
         break
       end
       puts "#{numerator} / #{denominator} is #{numerator/denominator}"
