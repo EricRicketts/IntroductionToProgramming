@@ -1,6 +1,5 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'byebug'
 
 class Exercise8Test < Minitest::Test
 
