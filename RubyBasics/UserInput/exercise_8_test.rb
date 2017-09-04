@@ -24,11 +24,12 @@ class Exercise8Test < Minitest::Test
       loop do
         puts "Please enter the denominator:"
         denominator = gets.chomp.strip 
-        if !valid_number?(denominator) || denominator == "0"
-          puts (denominator == "0" ? "Invalid Input.  A denominator of 0 is not allowed." : "Invalid Input.  Only integers are allowed.")
-          next
+        if denominator == "0"
+          puts "Invalid Input.  A denominator of 0 is not allowed."
+        else
+          break if valid_number?(denominator)
+          puts "Invalid Input.  Only integers are allowed." 
         end
-        break
       end
       return denominator.to_i      
     end
