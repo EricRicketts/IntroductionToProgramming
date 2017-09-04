@@ -14,11 +14,8 @@ class Exercise8Test < Minitest::Test
       loop do
         puts "Please enter the numerator:"
         numerator = gets.chomp.strip
-        unless valid_number?(numerator)
-          puts "Invalid Input.  Only integers are allowed."
-          next
-        end
-        break
+        break if valid_number?(numerator)
+        puts "Invalid Input.  Only integers are allowed."
       end
     return numerator.to_i
    end
