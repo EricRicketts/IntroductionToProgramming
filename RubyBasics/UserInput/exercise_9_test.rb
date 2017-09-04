@@ -11,10 +11,7 @@ class Exercise9Test < Minitest::Test
       loop do
         puts "How many output lines do you want?  Enter a number >= 3 (Q to quit):"
         user_input = gets.chomp.strip.downcase
-        if user_input == 'q'
-          puts
-          break
-        end
+        break if user_input == 'q'
         number_of_repeats = user_input.to_i
         unless number_of_repeats >= 3
           puts "That\'s not enough lines\."
@@ -22,6 +19,7 @@ class Exercise9Test < Minitest::Test
         end
         puts output * number_of_repeats
       end
+      puts
     end
 
   end
