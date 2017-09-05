@@ -54,4 +54,20 @@ class Exercise10Test < Minitest::Test
     $stdin = StringIO.new("8\n-5\n")
     assert_output(/8 \+ \-5 \= 3/) { opposites_attract }
   end
+
+  def test_two_positive_numbers
+    $stdin = StringIO.new("8\n4\n8\n-3\n")
+    assert_output(/Please start over\./) { opposites_attract }
+  end
+
+  def test_two_negative_numbers
+    $stdin = StringIO.new("-8\n-4\n-8\n3\n")
+    assert_output(/Please start over\./) { opposites_attract }
+  end
+
+  def test_zero_input
+    $stdin = StringIO.new("0\n4\n-8\n")
+    assert_output(/Only non-zero integers are allowed\./) { opposites_attract }
+  end
+
 end
