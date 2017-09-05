@@ -13,25 +13,21 @@ class Exercise10Test < Minitest::Test
       number1 * number2 < 0
     end
 
+    def get_valid_number
+      loop do
+        puts "Please enter a positive or negative integer:"
+        number = gets.chomp.strip   
+        return number if valid_number?(number)
+        puts "Invalid input.  Only non-zero integers are allowed."
+      end      
+    end
+
     def opposites_attract
       first_number = 1
       second_number = -1
       loop do
-        puts "Please enter a positive or negative integer:"
-        first_number = gets.chomp.strip
-        unless valid_number?(first_number)
-          puts "Invalid input.  Only non-zero integers are allowed."
-          next
-        end
-        loop do
-          puts "Please enter a positive or negative integer:"
-          second_number = gets.chomp.strip   
-          unless valid_number?(second_number)
-            puts "Invalid input.  Only non-zero integers are allowed."
-            next
-          end
-          break
-        end
+        first_number = get_valid_number
+        second_number = get_valid_number
         unless same_sign?(first_number.to_i, second_number.to_i)
           puts "Sorry. One integer must be positive, one must be negative."
           puts "Please start over."
