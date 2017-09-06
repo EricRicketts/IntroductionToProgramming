@@ -25,4 +25,5 @@ class Exercise4Test < Minitest::Test
     daylight = [true, false].sample
     assert_includes(["It's daytime!", "It's nighttime!"], time_of_day(daylight))
   end
+
 end
