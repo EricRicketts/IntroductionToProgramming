@@ -9,8 +9,8 @@ class Exercise5Test < Minitest::Test
       "The dog's name is #{name}."        
     end
 
-    def cat
-      "The cat's name is Ginger."
+    def cat(name)
+      "The cat's name is #{name}."
     end
 
   end
@@ -20,7 +20,7 @@ class Exercise5Test < Minitest::Test
   end
 
   def test_cat_name
-    assert_equal("The cat's name is Ginger.", cat)
+    assert_equal("The cat's name is Ginger.", cat('Ginger'))
   end
 
 end
