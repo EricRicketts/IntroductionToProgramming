@@ -17,7 +17,7 @@ class Exercise8Test < Minitest::Test
     end
 
     def sentence(a_name, an_activity)
-      a_name + " " + "went" + " " + an_activity + " " + "today."
+      "#{a_name} went #{an_activity} today."
     end
 
   end
