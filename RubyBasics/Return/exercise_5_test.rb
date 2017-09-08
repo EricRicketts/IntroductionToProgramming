@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class Exercise1Test < Minitest::Test
+class Exercise5Test < Minitest::Test
   
   def setup
     
@@ -11,7 +11,6 @@ class Exercise1Test < Minitest::Test
     end
 
   end
-
   def test_meal
     assert_output(/\ADinner\n#{nil}\z/) { print meal }
   end

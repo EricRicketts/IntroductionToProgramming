@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class Exercise1Test < Minitest::Test
+class Exercise4Test < Minitest::Test
   
   def setup
     
