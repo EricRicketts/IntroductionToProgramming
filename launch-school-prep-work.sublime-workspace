@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"cla",
+				"cla\tclass .. end"
+			],
+			[
 				"contact",
 				"contact_data"
 			],
@@ -17,7 +21,7 @@
 			],
 			[
 				"bef",
-				"befa	before(:all) do … end"
+				"befa\tbefore(:all) do … end"
 			],
 			[
 				"feed",
@@ -37,7 +41,7 @@
 			],
 			[
 				"if",
-				"if	if … end"
+				"if\tif … end"
 			],
 			[
 				"my_ha",
@@ -49,15 +53,15 @@
 			],
 			[
 				"do",
-				"dob	Insert do |variable| … end"
+				"dob\tInsert do |variable| … end"
 			],
 			[
 				"aft",
-				"afta	after(:all) do … end"
+				"afta\tafter(:all) do … end"
 			],
 			[
 				"l",
-				"loo	loop { .. }"
+				"loo\tloop { .. }"
 			],
 			[
 				"scre",
@@ -73,7 +77,7 @@
 			],
 			[
 				"be",
-				"befa	before(:all) do … end"
+				"befa\tbefore(:all) do … end"
 			],
 			[
 				"group",
@@ -85,7 +89,7 @@
 			],
 			[
 				"de",
-				"desc	describe"
+				"desc\tdescribe"
 			],
 			[
 				"secrt",
@@ -93,7 +97,7 @@
 			],
 			[
 				"wh",
-				"when	func"
+				"when\tfunc"
 			],
 			[
 				"serach",
@@ -153,11 +157,11 @@
 			],
 			[
 				"for",
-				"fore	Loop"
+				"fore\tLoop"
 			],
 			[
 				"pro",
-				"proto	Prototype"
+				"proto\tPrototype"
 			],
 			[
 				"secret",
@@ -173,7 +177,7 @@
 			],
 			[
 				"fo",
-				"fore	Loop"
+				"fore\tLoop"
 			],
 			[
 				"le",
@@ -285,7 +289,7 @@
 			],
 			[
 				"sum",
-				"submit	.submit()"
+				"submit\t.submit()"
 			],
 			[
 				"di",
@@ -369,11 +373,11 @@
 			],
 			[
 				"desc",
-				"desc	describe"
+				"desc\tdescribe"
 			],
 			[
 				"des",
-				"desce	describe"
+				"desce\tdescribe"
 			],
 			[
 				"new",
@@ -397,11 +401,11 @@
 			],
 			[
 				"a",
-				"a	<a>"
+				"a\t<a>"
 			],
 			[
 				"ht",
-				"html5	Simple HTML5 Boilerplate"
+				"html5\tSimple HTML5 Boilerplate"
 			],
 			[
 				"first",
@@ -420,10 +424,11 @@
 	"buffers":
 	[
 		{
-			"file": "FrontEndPrep/CSS/hello.html",
+			"file": "RubyBasics/Strings/exercise_10_test.rb",
 			"settings":
 			{
-				"buffer_size": 902,
+				"buffer_size": 291,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -473,12 +478,23 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/EricRicketts/Documents/LaunchSchool/PrepatoryWork",
-		"/Users/EricRicketts/Documents/LaunchSchool/PrepatoryWork/FrontEndPrep",
-		"/Users/EricRicketts/Documents/LaunchSchool/PrepatoryWork/FrontEndPrep/HTML"
+		"/home/eric_ricketts/Documents/IntroductionToProgramming",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings"
 	],
 	"file_history":
 	[
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings/exercise_9_test.rb",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings/exercise_8_test.rb",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings/exercise_7_test.rb",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings/exercise_6_test.rb",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings/exercise_5_test.rb",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings/exercise_4_test.rb",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings/exercise_3_test.rb",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings/exercise_2_test.rb",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/RubyBasics/Strings/exercise_1_test.rb",
+		"/home/eric_ricketts/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/eric_ricketts/Documents/IntroductionToProgramming/FrontEndPrep/CSS/hello.html",
 		"/Users/EricRicketts/Documents/LaunchSchool/PrepatoryWork/FrontEndPrep/HTML/hello.html",
 		"/Users/EricRicketts/Documents/LaunchSchool/PrepatoryWork/IntroductionToProgramming/exercises/spec/exercises_spec.rb",
 		"/Users/EricRicketts/Documents/LaunchSchool/PrepatoryWork/IntroductionToProgramming/more-stuff/spec/more_stuff_spec.rb",
@@ -595,10 +611,7 @@
 		"/Users/EricRicketts/Documents/Ruby/GUIApps/sokoban/spec/game/board/board_spec.rb",
 		"/Users/EricRicketts/Documents/Ruby/GUIApps/sokoban/game/components/cell.rb",
 		"/Users/EricRicketts/Documents/Perl/ModernPerl/first_scripts/hello_world.pl",
-		"/Users/EricRicketts/Documents/SQL/psql/start_pg.txt",
-		"/Users/EricRicketts/Documents/SQL/mysql/start_mysql.txt",
-		"/Users/EricRicketts/Documents/SQL/sqlite3/start_sqlite3.txt",
-		"/Users/EricRicketts/Documents/SQL/mysql/tysql_to_mysql.sql"
+		"/Users/EricRicketts/Documents/SQL/psql/start_pg.txt"
 	],
 	"find":
 	{
@@ -678,24 +691,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "FrontEndPrep/CSS/hello.html",
+					"file": "RubyBasics/Strings/exercise_10_test.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 902,
+						"buffer_size": 291,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								236,
-								236
+								291,
+								291
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

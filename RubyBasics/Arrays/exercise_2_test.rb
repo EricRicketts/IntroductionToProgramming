@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class Exercise1Test < Minitest::Test
+class Exercise2Test < Minitest::Test
   
   def test_select_fish
     pets = ['cat', 'dog', 'fish', 'lizard']
