@@ -13,9 +13,8 @@ class Exercise10Test < Minitest::Test
 
   def test_convert_to_ary
     expected = [[:type, 'sedan'], [:color, 'blue'], [:year, 2003]]
-    ary = []
-    @car.each { |key, value| ary.push([key, value]) }
-    assert_equal(expected, ary)
+    result = @car.map { |key, value| [key, value] }
+    assert_equal(expected, result)
   end
 
 end
